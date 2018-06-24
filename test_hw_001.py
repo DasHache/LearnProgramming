@@ -1,4 +1,5 @@
 # Create a list
+l = []
 
 
 # Add 3 elements to the list
