@@ -1,3 +1,4 @@
 class World:
     def __init__(self):
-        pass
+        print "I am a constructor of the class World"
+
