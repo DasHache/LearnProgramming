@@ -9,7 +9,7 @@
 #          put this line into a file, save the file, run it and observe yourself.
 #          DO NOT TRUST ANYONE! ALWAYS CHECK.
 #
-#          "EVERYBODY LIES"
+#          "EVERYBODY LIES" "EVERYBODY DIES"
 #                          -- Gregory House, a great python programmer.
 # 
 #    Q: To draw stuff... How can we do it in python?

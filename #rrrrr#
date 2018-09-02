@@ -1,0 +1,6 @@
+import Tkinter as Tk
+an_object_of_type_tkinter = Tk.Tk()
+canvas = Tk.Canvas(an_object_of_type_tkinter, width=300, height=200)
+canvas.create_rectangle(20, 20, 260, 160,  fill="light blue")
+canvas.pack()
+an_object_of_type_tkinter.mainloop()
