@@ -64,8 +64,7 @@
 # 
 #     Question?
 #     If you are not sure you understand something, you ask. 
-#Also, you can write your questions/comments in this file, below. 
-#where i need to writ 'from tk'? 
+#     Also, you can write your questions/comments in this file, below. 
 #     For example:
 #     I would like to know how to turn water into wine.
 #     When will I know kung-fu? 
@@ -124,8 +123,26 @@
 # 
 # Finally, your task is to separate the "run" part of the constructor's code 
 # into a separate member-function of the class World, named run.
+
+# Done?
 #
-#and for what i need to do this    i separed and? i think i maked a mistake because i don t uderstand what it gonna change now and it doesn t work bcs i can t run run
+# And it works?!
+# Excellent! That means you have already had some knowledge about classes.
+# Or, you are a genious (then, stop this and start inventing a better programming language).
+#
+# However, if you have the following error:
+#
+#   ... 
+#   File "/Users/kowaraj/src/DasHache/LearnProgramming/world.py", line 11, in run
+#     a.mainloop()
+# NameError: global name 'a' is not defined
+#
+# ... or something similar, it means you don't understand the "scope" of a variable.
+# And that is the subject of the next lesson.
+
+
+
+
 
 
 
