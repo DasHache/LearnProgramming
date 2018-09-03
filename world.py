@@ -1,6 +1,6 @@
+import Tkinter as Tk
 class World:
     def __init__(self):
-        import Tkinter as Tk
         print "I am a constructor of the class World"
         a = Tk.Tk()
         canvas = Tk.Canvas(a, width=300, height=200)
@@ -10,4 +10,3 @@ class World:
     def run(self):
         a.mainloop()
 
-w = World()
