@@ -1,3 +1,20 @@
+# As an advise: Before you start reading the task, start a stopwatch.
+#               And stop it once you're done. Write down the time it
+#               took: 
+#               - to undertand the task
+#               - to complete the task
+#               And add a comment why it took longer (or shorter)
+#               then it might have taken. 
+#               - Were you distracted by a cat?
+#                 (Don't hurt the cat, it's not his fault.)
+#               - The teacher doesn't explain good enough?
+#               - Any other reason? 
+# 
+# Whenever you do something... 
+# It is VERY important to KNOW how much time/effort you will spend
+# and how much resources/pleasure you will obtain for that.
+
+
 # Task 003. 5 points.
 
 # Part I.
