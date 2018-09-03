@@ -64,8 +64,8 @@
 # 
 #     Question?
 #     If you are not sure you understand something, you ask. 
-#     Also, you can write your questions/comments in this file, below. 
-# 
+#Also, you can write your questions/comments in this file, below. 
+#where i need to writ 'from tk'? 
 #     For example:
 #     I would like to know how to turn water into wine.
 #     When will I know kung-fu? 
@@ -124,7 +124,8 @@
 # 
 # Finally, your task is to separate the "run" part of the constructor's code 
 # into a separate member-function of the class World, named run.
-
+#
+#and for what i need to do this    i separed and? i think i maked a mistake because i don t uderstand what it gonna change now and it doesn t work bcs i can t run run
 
 
 
