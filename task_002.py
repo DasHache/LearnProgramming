@@ -2,7 +2,7 @@
 
 # Part I. 1 point per correctly answered question.
 # 
-# 1. Let's keep remembering stuff... We are making a video game. What do we need? 
+# 1. Let's keep revisitting stuff... We are making a video game. What do we need? 
 #
 #    Note! It will help you to remember all these stuff better if
 #          after each line of code described here, you STOP reading,
