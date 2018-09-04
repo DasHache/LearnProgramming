@@ -107,3 +107,32 @@ print "y = " + y
 # - ./snippets/task_004/dangeon_v2.py
 # - ./snippets/task_004/dangeon_v2_funcs.py
 
+# The most important thing you need to understand is what python consider a "level".
+# When you call a function in your code and 
+# python ENTERS this function -> it goes 1 level DOWN. 
+# python EXITS  the  function -> it goes 1 level back. One level UP.
+
+# When python ENTERS a function (goes 1 level DOWN), 
+# and if you call another function from the 1st function (python goes 1 MORE level DOWN).
+
+# Consider this code:
+
+def f2():
+    print "in f2"
+
+def f1():
+    print "in f1"
+    f2()
+
+# And you "f1" which, in turn, calls "f2" like this:
+f1()
+
+# Then, inside the function "f2" it would be on the level 2. Inside the f1, on the level 1."
+
+# Is it not clear?
+# It's ok. Do not worry.
+# We will get back to it many times later. It's not that simple.
+
+
+
+
