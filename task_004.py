@@ -133,6 +133,48 @@ f1()
 # It's ok. Do not worry.
 # We will get back to it many times later. It's not that simple.
 
+# But now, let's get back to the problem in task_003.py.
+# Why this gives you an error? 
+
+import Tkinter as Tk
+class World:
+    def __init__(self):
+        a = Tk.Tk()
+        canvas.create_rectangle(20, 20, 260, 160,  fill="light blue")
+        canvas.pack()
+
+    def run(self):
+        a.mainloop() # ERROR is HERE !!! Variable 'a' is NOT BOUND !!!
+
+# Let's think. You ENTER the level (scope) called "run". Which magic do you have here?
+# 1. You have variable "self" which is bound to something. 
+# 2. Also, you have everything imported from Tkinter (by the first line).
+#    Why? Because this magic you brought from the previous "level" (scope). 
+# And... nothing else.
+# Variable 'a' is not found! 
+# 
+# Ok. It's easy to fix. 
+# Normal way to do this (when we are in a class) is the following.
+
+class A:
+    def __init__(self):
+        self.a = 5                 # <------ self.a
+
+    def run(self):
+        print "a = ", self.a       # <------ self.a 
+
+# What have we done? Why now 'a' is an error? How does python know what it is? 
+# What is it BOUND to? 
+# The correct answer would be that "There is NO variable a".
+# But, "a" is a MEMBER of the class "A". 
+# And "self" is just a "pointer" to the object of class A.
+# Think of "self" as a way TO GET ACCESS to 'a'.
+# As long as you are inside the class "A" you can access "a" with "self.a".
+
+# Now, you should be able to solve the problem. Fix the file "world.py".
+
+
+
 
 
 
