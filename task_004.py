@@ -124,7 +124,7 @@ def f1():
     print "in f1"
     f2()
 
-# And you "f1" which, in turn, calls "f2" like this:
+# And you call "f1" which, in turn, calls "f2" like this:
 f1()
 
 # Then, inside the function "f2" it would be on the level 2. Inside the f1, on the level 1."
