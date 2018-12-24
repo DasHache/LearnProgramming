@@ -15,6 +15,3 @@
 #  3. a barrel attached to the middle of the tank (long narrow rectangle)
 
 # That's it. 3 points.
-.
-
-
