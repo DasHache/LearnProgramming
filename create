@@ -1,0 +1,16 @@
+import Tkinter as Tk
+
+tk =Tk.Tk()
+canvas = Tk.Canvas(tk, width=300, height=300)
+canvas.pack()
+print "which color do you want for the background?"
+print "blue, red, brown, white, black?"
+
+if input - blue
+
+   canvas.create_rectangle(0, 0, 300, 300,  fill="blue")
+
+
+
+
+tk.mainloop()
