@@ -1,4 +1,5 @@
 import Tkinter as Tk
+from threading import Timer
 class World:
     def __init__(self):
         print "I am a constructor of the class World"
@@ -8,6 +9,7 @@ class World:
         canvas.create_rectangle(20, 160, 80, 100,  fill="black")
         canvas.create_rectangle(50, 120, 100, 80,  fill="red")
         canvas.create_rectangle(80, 100, 150, 100,  fill="brown")
+        canvas.create_oval(150, 110, 130, 90, fill="yellow")
         canvas.pack()
 
     def run(self):

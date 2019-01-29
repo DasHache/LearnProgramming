@@ -51,7 +51,7 @@
 # Google is poweful, but requires some understanding of what you're looking for
 # and a correct way of thinking about the subject.
 # 
-# So, your task if to make a game that prints 'hello world' on the console every 1s. 
+# So, your task is to make a game that prints 'hello world' on the console every 1s. 
 # (5 points)
 # A more advanced task is to make the charge change its color every 1s (red-blue-red-...).
 # (+5 points)
