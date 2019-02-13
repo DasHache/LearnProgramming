@@ -1,5 +1,7 @@
 import Tkinter as Tk
 from threading import Timer
+
+
 class World:
     def __init__(self):
         print "I am a constructor of the class World"
@@ -13,5 +15,18 @@ class World:
         canvas.pack()
 
     def run(self):
+
+        t = Timer(1.0, self.hi)
+        t.start
+
         self.a.mainloop()
 
+
+    def hi():
+        print "Hello world"
+        t = Timer(1.0, self.hi)
+        t.start()
+
+    
+    
+        
