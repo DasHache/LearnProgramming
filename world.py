@@ -13,16 +13,17 @@ class World:
         canvas.create_rectangle(80, 100, 150, 100,  fill="brown")
         canvas.create_oval(150, 110, 130, 90, fill="yellow")
         canvas.pack()
-
+        
+        
     def run(self):
 
         t = Timer(1.0, self.hi)
-        t.start
+        t.start()
 
         self.a.mainloop()
 
 
-    def hi():
+    def hi(self):
         print "Hello world"
         t = Timer(1.0, self.hi)
         t.start()
