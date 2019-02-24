@@ -20,7 +20,7 @@ class World:
         
     def run(self):
 
-        t = Timer(1.0, self.hi)
+        t = Timer(0.1, self.hi)
         t.start()
 
         self.a.mainloop()
@@ -38,10 +38,20 @@ class World:
         if current_color == 'blue':
             self.canvas.itemconfigure(self.id_charge, fill='red')
             
-        self.canvas.coords(self.id_charge, self.x+10, 110, self.x1+10, 90)
-        self.x = self.x+10
-        self.x1 = self.x1+10
-        t = Timer(1.0, self.hi)
+        self.canvas.coords(self.id_charge, self.x+1, 110, self.x1+1, 90)
+        self.x = self.x+1
+        self.x1 = self.x1+1
+
+        if self.x1 == 238:
+            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
+        if self.x1 == 239:
+            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
+        if self.x1 == 240:
+            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
+        if self.x1 == 241:
+            self.canvas.delete(self.id_charge)
+            
+        t = Timer(0.1, self.hi)
         t.start()
         
 
