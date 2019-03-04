@@ -71,3 +71,81 @@
 #    h = Handle(w)
 #
 #    Think carefully where exactly you need to put these lines in 'game.py'
+#
+# 5. The end.
+# 
+#    If you did right, you should see the following (if you click on canvas and press '1', 'a', 'b'):
+
+####################################################################################################
+#
+# [kowaraj@ams-usba2eth001: ~/src/DasHache/LearnProgramming ] python game.py
+# I am a constructor of the class Game
+# I am a constructor of the class World
+# You clicked a mouse button.
+# You clicked a mouse button.
+# You pressed a key!
+#  ... key is '1'
+# You pressed a key!
+#  ... key is 'a'
+# You pressed a key!
+#  ... key is unknown
+#
+####################################################################################################
+
+
+
+
+
+
+
+
+# ----->>>         You can ignore the rest, we will do it together later.      <<<------------
+
+# 6. For the Git 
+# 
+# When you commit, be careful! You have added a new file: 'handle.py'
+# 
+# If you type 'git status' you will see the following:
+
+####################################################################################################
+# [kowaraj@ams-usba2eth001: ~/src/DasHache/LearnProgramming ] git status
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   modified:   game.py
+#   modified:   task/task_007.py
+#   modified:   world.py
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#   handle.py
+####################################################################################################
+
+# Notice: 'Untracked files' and 'handle.py'
+
+# Then, you need to add 'handle.py' to your repository:
+
+####################################################################################################
+# [kowaraj@ams-usba2eth001: ~/src/DasHache/LearnProgramming ] git add ./handle.py
+# [kowaraj@ams-usba2eth001: ~/src/DasHache/LearnProgramming ] git status
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#   new file:   handle.py
+####################################################################################################
+
+
+# Now you can commit:
+
+####################################################################################################
+# [kowaraj@ams-usba2eth001: ~/src/DasHache/LearnProgramming ] git commit -m "Add file 'handle.py'"
+# [master 30e39cc] Add file 'handle.py'
+#  1 file changed, 19 insertions(+)
+#  create mode 100644 handle.py
+####################################################################################################
+
+
+# ... and push.
