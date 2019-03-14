@@ -20,16 +20,16 @@ class World:
         
     def run(self):
 
-        t = Timer(0.1, self.hi)
+        t = Timer(1.5, self.hi)
         t.start()
 
         self.a.mainloop()
 
 
     def hi(self):
-        print "Hello world"
+       # print "Hello world"
        	current_color=self.canvas.itemcget(self.id_charge, 'fill')
-        print 'color = ', current_color 
+        #print 'color = ', current_color 
         
         if current_color == 'yellow':
             self.canvas.itemconfigure(self.id_charge, fill='red')
@@ -51,7 +51,7 @@ class World:
         if self.x1 == 241:
             self.canvas.delete(self.id_charge)
             
-        t = Timer(0.1, self.hi)
+        t = Timer(1.5, self.hi)
         t.start()
         
 
