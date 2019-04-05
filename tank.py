@@ -1,3 +1,5 @@
+from charge import Charge
+
 class Tank:
 
     def __init__(self, the_world_I_live_in, my_initial_position_x, my_initial_position_y):
@@ -26,6 +28,12 @@ class Tank:
         self.by2 = self.by1 + 0
         self.__drawBarrel()
 
+        # We will need this to draw the charge
+        self.end_of_barrel = [self.bx2, self.by2] # The type of this is 'array'
+
+        # Drawing a charge
+        c = Charge(self)
+        
     def __drawBarrel(self):
         self.b = self.w.canvas.create_line(self.bx1, self.by1, self.bx2, self.by2, fill="grey", width=3)
 
