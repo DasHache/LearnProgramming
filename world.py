@@ -1,6 +1,6 @@
 import Tkinter as Tk
 from threading import Timer
-
+from tank import Tank
 
 class World:
     def __init__(self):
@@ -16,7 +16,9 @@ class World:
         
         
     def run(self):
+        self.addTank()
         self.a.mainloop()
 
     def addTank(self):
-        self.t = Tank(self, 100, 100) # Create a tank!
+        self.t = Tank(self, 70, 100) # Create a tank!
+        self.t.draw()
