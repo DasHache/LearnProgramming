@@ -12,49 +12,9 @@ class World:
         self.x1 = 130
         canvas.create_rectangle(20, 20, 260, 160,  fill="light blue")
         canvas.create_rectangle(20, 160, 80, 100,  fill="black")
-        canvas.create_rectangle(50, 120, 100, 80,  fill="red")
-        canvas.create_rectangle(80, 100, 150, 100,  fill="brown")
-        self.id_charge = canvas.create_oval(self.x, 110, self.x1, 90, fill="yellow")
         canvas.pack()
         
         
     def run(self):
-
-        t = Timer(1.5, self.hi)
-        t.start()
-
         self.a.mainloop()
 
-
-    def hi(self):
-       # print "Hello world"
-       	current_color=self.canvas.itemcget(self.id_charge, 'fill')
-        #print 'color = ', current_color 
-        
-        if current_color == 'yellow':
-            self.canvas.itemconfigure(self.id_charge, fill='red')
-        if current_color == 'red':
-            self.canvas.itemconfigure(self.id_charge, fill='blue')
-        if current_color == 'blue':
-            self.canvas.itemconfigure(self.id_charge, fill='red')
-            
-        self.canvas.coords(self.id_charge, self.x+1, 110, self.x1+1, 90)
-        self.x = self.x+1
-        self.x1 = self.x1+1
-
-        if self.x1 == 238:
-            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
-        if self.x1 == 239:
-            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
-        if self.x1 == 240:
-            self.canvas.coords(self.id_charge, self.x, 120, self.x1, 80)
-        if self.x1 == 241:
-            self.canvas.delete(self.id_charge)
-            
-        t = Timer(1.5, self.hi)
-        t.start()
-        
-
-    
-    
-        
