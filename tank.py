@@ -1,4 +1,3 @@
-
 class Tank:
 
     def __init__(self, the_world_I_live_in, my_initial_position_x, my_initial_position_y):
@@ -7,19 +6,29 @@ class Tank:
         self.x = my_initial_position_x
         self.y = my_initial_position_y
         self.s = 40  # This is my size
-        self.bangle = 0 # This is the initial angle of my barrel
-        self.blen = 50 # lenght of my barrel
+        self.blength = 50 # lenght of my barrel
         self.b = None # This will be my barrel
         
     def draw(self):
 
         # Drawing a tank
         d = self.s/2
-        tank_x1 = self.x - d
-        tank_y1 = self.y - d
-        tank_x2 = self.x + d
-        tank_y2 = self.y + d
-        self.w.canvas.create_rectangle(tank_x1, tank_y1, tank_x2, tank_y2, fill="red")
+        x1 = self.x - d
+        y1 = self.y - d
+        x2 = self.x + d
+        y2 = self.y + d
+        self.w.canvas.create_rectangle(x1, y1, x2, y2, fill="red")
+
+        # Drawing a barrel
+        self.bx1 = x1 + (x2 - x1)/2
+        self.by1 = y1 + (y2 - y1)/2
+        self.bx2 = self.bx1 + self.blength
+        self.by2 = self.by1 + 0
+        self.__drawBarrel()
+
+    def __drawBarrel(self):
+        self.b = self.w.canvas.create_line(self.bx1, self.by1, self.bx2, self.by2, fill="grey", width=3)
+
 
 
     
