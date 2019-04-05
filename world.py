@@ -18,3 +18,5 @@ class World:
     def run(self):
         self.a.mainloop()
 
+    def addTank(self):
+        self.t = Tank(self, 100, 100) # Create a tank!
