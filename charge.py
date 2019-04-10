@@ -24,7 +24,9 @@ class Charge:
         y1 = self.y -z
         y2 = self.y +z
         self.id_on_canvas = self.t.w.canvas.create_oval(x1, y1, x2, y2, fill="yellow")
-        
+
+        self.id_on_canvas2 = self.t.w.canvas.create_oval(x1 + 10, y1 + 10, x2 + 10 , y2 + 10, fill="y\
+ellow")
         
 
 
