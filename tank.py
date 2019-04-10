@@ -33,7 +33,7 @@ class Tank:
 
         # Drawing a charge
         c = Charge(self)
-        
+        c2 = Charge(self)
     def __drawBarrel(self):
         self.b = self.w.canvas.create_line(self.bx1, self.by1, self.bx2, self.by2, fill="grey", width=3)
 
