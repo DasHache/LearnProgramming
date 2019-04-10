@@ -1,5 +1,5 @@
 import Tkinter as Tk
-from threading import Timer
+from timer import InfiniteLoopTimer
 from tank import Tank
 
 class World:
@@ -13,9 +13,20 @@ class World:
         canvas.pack()
         
     def run(self):
+
+        # create a timer for the World re-Draw (update)
+        self.timerUpdate = InfiniteLoopTimer(self, self, "update")
+        # start the timer
+        self.timerUpdate.start()
+        
         self.addTank()
         self.a.mainloop()
 
     def addTank(self):
         self.t = Tank(self, 70, 100)
         self.t.draw()
+
+    def update(self):
+        ''' Function to update the world (re-draw it)
+        '''
+        print "World.update() was called!"
