@@ -1,6 +1,7 @@
 import Tkinter as Tk
 from timer import InfiniteLoopTimer
 from tank import Tank
+from time import sleep
 
 class World:
     def __init__(self):
@@ -20,6 +21,8 @@ class World:
         self.timerUpdate.start()
         
         self.addTank()
+
+        self.a.protocol("WM_DELETE_WINDOW", self.__on_close)
         self.a.mainloop()
 
     def addTank(self):
@@ -30,3 +33,11 @@ class World:
         ''' Function to update the world (re-draw it)
         '''
         print "World.update() was called!"
+        z = self.canvas.create_oval(15, 5, 25, 15, fill="red")
+        sleep(0.1) # 100 ms
+        self.canvas.delete(z)
+
+    def __on_close(self):
+        self.timerUpdate.stop()
+        sleep(2)
+        exit()
