@@ -27,7 +27,6 @@ class Game:
         '''
         print('You pressed Ctrl+C!')
         self.running = False
-        self.w.stop_mainloop()
         print('Your game will soon be OVER.')
 
             
