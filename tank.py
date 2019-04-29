@@ -10,9 +10,10 @@ class Tank:
         self.s = 40  # This is my size
         self.blength = 50 # lenght of my barrel
         self.b = None # This will be my barrel
-        
-    def draw(self):
+        self.charge_velocity = 20 # [m/s] initial velocity of a charge (power) ! will be a tuple
+        self.c = None # no charge yet
 
+    def draw(self):
         # Drawing a tank
         d = self.s/2
         x1 = self.x - d
@@ -32,11 +33,19 @@ class Tank:
         self.end_of_barrel = [self.bx2, self.by2] # The type of this is 'array'
 
         # Drawing a charge
-        c = Charge(self)
+        self.c = Charge(self)
 
     def __drawBarrel(self):
         self.b = self.w.canvas.create_line(self.bx1, self.by1, self.bx2, self.by2, fill="grey", width=3)
 
+
+    def recalc(self):
+        if self.c:
+            self.c.recalc()
+
+    def update(self):
+        if self.c:
+            self.c.update()
 
 
     

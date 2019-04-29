@@ -14,7 +14,7 @@ class World():
         canvas.create_rectangle(20, 30, 575, 460, fill="light blue")
         canvas.create_rectangle(20, 160, 80, 100, fill="black")
         canvas.pack()
-
+        
         self.update_period = 1000 # ms
         self.recalc_period = 500 # ms
 
@@ -34,6 +34,7 @@ class World():
 
     def update(self):
         self.__mark_update()
+        self.t.update()
         if self.game.running:
             self.canvas.after(self.update_period, self.update)
         else:
@@ -41,7 +42,9 @@ class World():
 
     def recalc(self):
         self.__mark_recalc()
+        self.t.recalc()
         if self.game.running:
+            
             self.canvas.after(self.recalc_period, self.recalc)
         else:
             self.a.quit() # quit the mainloop
