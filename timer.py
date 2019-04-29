@@ -9,16 +9,23 @@ class InfiniteLoopTimer:
         self.dt = dt
 
     def start(self):
-        if self.stopped:
-            return
-
         self.t = Timer(self.dt, self.callback)
         self.t.start()
 
     def callback(self):
-        getattr(self.o, self.omn)()
-        self.start()
+        ''' 
+        This function gets called whtn the timer elapses.
+        1. It calls the callback function: self.omn
+        2. If callback return value (keep_running) is True, 
+           it means the game is ON.
+           Then we re-Start the timer by: self.start
+        3. If the callback return value is False, 
+           we do NOT re-start the timer. 
+           Then the world will not be neither updated nor re-calculated
+        '''
+        
+        keep_running = getattr(self.o, self.omn)()
+        if keep_running:
+            self.start()
 
-    def stop(self):
-        self.t.cancel()
-        self.stopped = True
+
