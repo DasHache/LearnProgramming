@@ -24,25 +24,25 @@ class World():
 
     def run(self):
         self.addTank()
-        self.update_myself_without_timer() # run the infinite loop!
-        self.recalc_myself_without_timer() # run the infinite loop!
+        self.update() # infinite loop for Update!
+        self.recalc() # infinite loop for Re-calc!
         self.a.mainloop()
 
     def addTank(self):
         self.t = Tank(self, 70, 100)
         self.t.draw()
 
-    def update_myself_without_timer(self):
+    def update(self):
         self.__mark_update()
         if self.game.running:
-            self.canvas.after(self.update_period, self.update_myself_without_timer)
+            self.canvas.after(self.update_period, self.update)
         else:
             self.a.quit() # quit the mainloop
 
-    def recalc_myself_without_timer(self):
+    def recalc(self):
         self.__mark_recalc()
         if self.game.running:
-            self.canvas.after(self.recalc_period, self.recalc_myself_without_timer)
+            self.canvas.after(self.recalc_period, self.recalc)
         else:
             self.a.quit() # quit the mainloop
 
